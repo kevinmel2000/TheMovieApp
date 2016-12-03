@@ -1,0 +1,113 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.DetailMovieFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#009688">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Batman"
+                android:gravity="center"
+                android:textSize="70dp"
+                android:textColor="#fffefe"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/batman"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="2015" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="120min" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="8/10" />
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:background="#85e3da"
+                    android:textColor="#202928"
+                    android:layout_marginTop="10dp"
+                    android:text="Mark As Fovorite" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:text="Ini film keren banget sumpah, gw gak boong. Menceritakan perjalanan Batman dari kecil ampe gede. Seru deh pokoknya"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="Tarailers"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/play"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trailer 1"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
