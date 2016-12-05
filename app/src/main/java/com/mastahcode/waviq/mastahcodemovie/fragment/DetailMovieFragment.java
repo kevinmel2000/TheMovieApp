@@ -1,4 +1,4 @@
-package layout;
+package com.mastahcode.waviq.mastahcodemovie.fragment;
 
 
 import android.os.Bundle;
