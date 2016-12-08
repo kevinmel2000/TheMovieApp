@@ -34,7 +34,7 @@ public class MovieStationViewHolder extends RecyclerView.ViewHolder {
         this.context = context;
         this.poster = (ImageView)itemView.findViewById(R.id.movie_card);
         this.title = (TextView)itemView.findViewById(R.id.title_card);
-        this.titleDetail = (TextView)itemView.findViewById(R.id.titleDetail);
+
 
 
     }

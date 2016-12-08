@@ -1,5 +1,9 @@
 package com.mastahcode.waviq.mastahcodemovie.models;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by waviq on 4/12/2016.
  *
@@ -7,58 +11,67 @@ package com.mastahcode.waviq.mastahcodemovie.models;
 
 public class Movie {
 
-    private String posterPath;
     private String title;
+    private String posterPath;
     private String releaseDate;
     private int runtime;
     private String voteAverage;
     private String overview;
+    private String trailer;
 
-    public String getPosterPath() {
-        return posterPath;
+    public Movie(String title, String posterPath, String releaseDate, int runtime, String voteAverage, String overview) {
+        this.title = title;
+        this.posterPath = posterPath;
+        setReleaseDate(releaseDate);
+        this.runtime = runtime;
+        this.voteAverage = voteAverage;
+        this.overview = overview;
     }
 
-    public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
+
+    public void setReleaseDate(String releaseDate) {
+        SimpleDateFormat formatDefault = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formatYear = new SimpleDateFormat("yyyy");
+
+        try {
+            Date YearFormat = formatDefault.parse(releaseDate);
+            releaseDate = formatYear.format(YearFormat);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        this.releaseDate = releaseDate;
+    }
+
+    public Movie(String trailer) {
+        this.trailer = trailer;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getPosterPath() {
+        return posterPath;
     }
 
     public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
-
     public int getRuntime() {
         return runtime;
-    }
-
-    public void setRuntime(int runtime) {
-        this.runtime = runtime;
     }
 
     public String getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(String voteAverage) {
-        this.voteAverage = voteAverage;
-    }
-
     public String getOverview() {
         return overview;
     }
 
-    public void setOverview(String overview) {
-        this.overview = overview;
+    public String getTrailer() {
+        return trailer;
     }
 }
